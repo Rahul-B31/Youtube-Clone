@@ -6,6 +6,7 @@ const appSlice = createSlice({
         open:true, 
         videos:[],
         category:"All",
+        searchSuggetion:[],
     },
     reducers:{
         toogleSidebar:(state)=>{
@@ -17,7 +18,10 @@ const appSlice = createSlice({
         setCategory:(state,action)=>{
             state.category = action.payload;
         },
+        setSearchSuggetion :(state,action)=>{
+           state.searchSuggetion = action.payload;
+        }
     }
 })
-export const {toogleSidebar,setHomeVideos,setCategory} = appSlice.actions;
+export const {toogleSidebar,setHomeVideos,setCategory,setSearchSuggetion} = appSlice.actions;
 export default appSlice;
